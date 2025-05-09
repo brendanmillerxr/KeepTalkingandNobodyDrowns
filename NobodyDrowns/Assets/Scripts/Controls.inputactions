@@ -1,0 +1,34 @@
+{
+    "name": "Controls",
+    "maps": [
+        {
+            "name": "Test",
+            "id": "59015522-57e7-4d3e-b006-13474b66caad",
+            "actions": [
+                {
+                    "name": "Lose Life",
+                    "type": "Button",
+                    "id": "91f2d7d8-1157-4d79-8c95-73a1d1e88dc8",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "55de27a4-c4c9-4ca9-8d85-6be121ee1810",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Lose Life",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
