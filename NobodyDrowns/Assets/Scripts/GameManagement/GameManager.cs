@@ -3,7 +3,10 @@ using UnityEngine.UI;  // For UI Image references
 
 public class GameManager : MonoBehaviour
 {
+
     public static GameManager Instance;
+
+
 
     [Header("Player Lives")]
     public int maxLives = 3;
@@ -13,6 +16,10 @@ public class GameManager : MonoBehaviour
     public Image[] lifeIcons;  // Array to hold references to life icons
     public Sprite fullLifeSprite;
     public Sprite emptyLifeSprite;
+
+    public GameObject startMenuPanel;
+    public GameObject gameplayPanel;
+    public GameObject endPanel;
 
     void Awake()
     {
@@ -29,6 +36,15 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        startMenuPanel.SetActive(true);
+        gameplayPanel.SetActive(false);
+        endPanel.SetActive(false);
+    }
+    public void StartGame()
+    {
+        startMenuPanel.SetActive(false);
+        gameplayPanel.SetActive(true);
+        endPanel.SetActive(false);
         currentLives = maxLives;
         UpdateLivesUI();
     }
@@ -69,6 +85,8 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Game Over!");
         // Add your game over logic here
-        }
+        gameplayPanel.SetActive(false);
+        endPanel.SetActive(true);
+    }
 }
     
